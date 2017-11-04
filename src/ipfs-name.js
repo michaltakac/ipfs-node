@@ -40,7 +40,7 @@ module.exports = class Names {
       await this.createKey(name)
     } catch (err) {
       if (err === 'Error: key by that name already exists, refusing to overwrite') {
-        // do nothing
+        return name
       } else {
         throw err
       }
